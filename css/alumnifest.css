@@ -1,0 +1,1114 @@
+/* ==========================================================================
+   NATIVE CSS CUSTOM PROPERTIES (THEMING ENGINE)
+   ========================================================================== */
+
+/* Light Theme Configuration - Set as Default Base */
+:root,
+:root[data-theme="light"] {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-accent: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --accent-glow: #e11d48;
+    --gradient-primary: linear-gradient(to right, rgb(6, 246, 6), rgba(206, 206, 6, 0.927), red, yellow, rgb(6, 246, 6));
+    --gradient-primary2: linear-gradient(to right, rgb(6, 246, 6), rgb(135, 98, 18), red, rgb(166, 118, 6), rgb(6, 246, 6));
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --modal-overlay: rgba(15, 23, 42, 0.6);
+    --logo-border: #7be011;
+    --logo-borde1: #00e5ff;
+    --test-color: #ff0000;
+}
+
+/* Dark Theme Variant */
+:root[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-secondary: #1a1a1a;
+    --bg-accent: #242424;
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --accent-glow: #ff9f43;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --modal-overlay: rgba(0, 0, 0, 0.75);
+}
+
+/* ==========================================================================
+   RESET & SYSTEM STYLES LINKED TO VARIABLE ENGINES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   COMPONENTS & BRANDING STYLES
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--bg-secondary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--card-shadow);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Completely Round Logo Implementation */
+.alufest__logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--logo-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.alufest__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent-glow);
+}
+
+.theme__btn {
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    padding: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   HERO LAYOUT WITH GRADIENT TYPOGRAPHY
+   ========================================================================== */
+.hero {
+    padding: 6rem 5% 4rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Gradient Map: Hero Heading */
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback support */
+}
+
+.hero h1 span {
+    background: var(--gradient-primary2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero h4 {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 2.5rem;
+}
+
+.countdown-box {
+    background: var(--bg-secondary);
+    padding: 10px 20px;
+    border-radius: 8px;
+    min-width: 75px;
+    border: 1px solid var(--bg-accent);
+    box-shadow: var(--card-shadow);
+}
+
+.countdown-box span {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.countdown-box label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Gradient Map: Primary Action Registration Buttons */
+.btn-primary {
+    display: inline-block;
+    background: var(--gradient-primary);
+    color: #ffffff !important;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* START HOSTS MODAL STYLES */
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #212529;
+            --text-muted: #6c757d;
+            --overlay-bg: rgba(15, 23, 42, 0.4);
+            --modal-bg: #ffffff;
+            --accent: #0f172a;
+            --radius-lg: 12px;
+            --radius-md: 8px;
+            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+            font-weight: 500;
+            letter-spacing: -0.025em;
+            font-size: 2.25rem;
+        }
+
+        /* Grid & Responsive Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 66.67%; /* 3:2 Aspect Ratio */
+            overflow: hidden;
+            background-color: #e2e8f0;
+        }
+
+        .card-image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .card:hover .card-image-wrapper img {
+            transform: scale(1.04);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .card-description {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Modal Overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--overlay-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            padding: 1.5rem;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Modal Window Box */
+        .modal-window {
+            background: var(--modal-bg);
+            width: 100%;
+            max-width: 900px;
+            max-height: 85vh;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: scale(0.96) translateY(15px);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .modal-overlay.active .modal-window {
+            transform: scale(1) translateY(0);
+        }
+
+        /* Sticky Header */
+        .modal-header {
+            padding: 1.5rem 2.5rem;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--modal-bg);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .modal-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            background-color: #f1f5f9;
+            color: var(--text-main);
+        }
+
+        /* Scrollable Content Body */
+        .modal-body {
+            padding: 2.5rem;
+            overflow-y: auto;
+            font-size: 1.05rem;
+            color: #334155;
+            line-height: 1.8;
+        }
+
+        .modal-body p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        /* Advanced Wrapping Elements */
+        .inline-figure {
+            margin: 0.5rem;
+            width: 46%;
+            max-width: 380px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inline-figure img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            display: block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .inline-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin-top: 0.6rem;
+            text-align: left;
+            font-style: italic;
+            border-left: 2px solid #cbd5e1;
+            padding-left: 0.6rem;
+        }
+
+        /* Clean Alternating Floats */
+        .float-left {
+            float: left;
+            margin-right: 2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .float-right {
+            float: right;
+            margin-left: 2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Clearfix to secure container boundaries */
+        .modal-body::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            .modal-header {
+                padding: 1.25rem 1.5rem;
+            }
+            .modal-body {
+                padding: 1.5rem;
+            }
+            .inline-figure {
+                width: 100%;
+                float: none !important;
+                margin: 1.5rem 0;
+                max-width: 100%;
+            }
+            .modal-body p {
+                text-align: left;
+            }
+        }
+   /* END HOSTS MODAL STYLES */
+
+/* ==========================================================================
+   SECTIONS & GRADIENT BORDERS
+   ========================================================================== */
+section {
+    padding: 4rem 5%;
+}
+
+/* Gradient Map: Section Underline Border Markers */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient-primary2);
+    border-radius: 2px;
+    margin: 10px auto 0;
+}
+
+.about-grid {
+    margin-bottom: 3rem;
+}
+
+.about-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    background: var(--bg-secondary);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--bg-accent);
+    box-shadow: var(--card-shadow);
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.about-text ol, .about-text ul {
+    margin-left: 20px;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.about-text li {
+    margin-bottom: 0.5rem;
+}
+
+.who_is {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+/* Speakers & Hosts Grid Layout */
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.speaker-card {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--bg-accent);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s;
+}
+
+.speaker-card:hover {
+    transform: translateY(-5px);
+}
+
+.speaker-img-wrapper img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.speaker-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.speaker-info h3 {
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.speaker-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+/* Media/Banner Layouts */
+.media-banner .responsive-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.media-banner img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* ==========================================================================
+   MOBILE LAYOUT OVERRIDES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-secondary);
+        padding: 20px;
+        gap: 15px;
+        border-top: 1px solid var(--bg-accent);
+        box-shadow: var(--card-shadow);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .countdown-container {
+        flex-wrap: wrap;
+    }
+
+    .about-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Decorative highlight mapping on countdown tracking boxes */
+.countdown-box {
+    border: 1px solid transparent !important;
+    background: linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box,
+                var(--gradient-primary2) border-box !important;
+}
+
+.countdown-box span {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ==========================================================================
+   REGISTRATION FORM & FIELD STYLES (THEME INTEGRATION)
+   ========================================================================== */
+.register-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: var(--bg-secondary);
+    border-radius: 16px;
+    border: 1px solid var(--bg-accent);
+    box-shadow: var(--card-shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+/* Adaptive Input, Textarea, and Select Field Elements */
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: 2px solid var(--bg-accent);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Dropdown arrow adaptation for select tags */
+select.form-control {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://w3.org' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    padding-right: 2.5rem;
+}
+
+/* Focus States mapping your Accent Glow token */
+.form-control:focus {
+    border-color: var(--accent-glow);
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.15);
+}
+
+/* Form Helper or Small Description Text */
+.form-text {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Checkbox & Radio layout refinements */
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.form-check input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-glow);
+    cursor: pointer;
+}
+
+/* Form submission button layout */
+.btn-submit {
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   SIMPLE GALLERY CARD GRID SYSTEM
+   ========================================================================== */
+.gallery-wrapper {
+    padding: 3rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gallery-header p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Evenly distributed grid layout */
+.simple-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Clean, standard picture card container */
+.gallery-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--bg-accent);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Clean image window with locked aspect ratio heights */
+.card-image-box {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card Caption Underneath */
+.card-caption {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-caption h3 {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.card-caption p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Subtle, polished micro-interaction glow on focus */
+.gallery-card:hover {
+    transform: translateY(-4px);
+    border-color: transparent;
+    background: linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box,
+                var(--gradient-primary2) border-box;
+}
+
+/* Responsive adjustment for single-column mobile viewports */
+@media (max-width: 576px) {
+    .simple-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================================================
+   SIMPLE GALLERY CARD GRID SYSTEM
+   ========================================================================== */
+.gallery-wrapper {
+    padding: 3rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gallery-header p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Evenly distributed grid layout */
+.simple-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Clean, standard picture card container */
+.gallery-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--bg-accent);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Clean image window with locked aspect ratio heights */
+.card-image-box {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card Caption Underneath */
+.card-caption {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-caption h3 {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.card-caption p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Subtle, polished micro-interaction glow on focus */
+.gallery-card:hover {
+    transform: translateY(-4px);
+    border-color: transparent;
+    background: linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box,
+                var(--gradient-primary2) border-box;
+}
+
+/* Responsive adjustment for single-column mobile viewports */
+@media (max-width: 576px) {
+    .simple-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Responsive adjustment for small mobile windows */
+/* ==========================================================================
+   UNIVERSAL MOBILE RESPONSIVE NAV FIX (Place at the absolute bottom of CSS)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Ensure the toggle button icon is visible */
+    .menu-toggle {
+        display: block !important;
+        background: none !important;
+        border: none !important;
+        color: var(--text-primary) !important;
+        font-size: 1.8rem !important;
+        cursor: pointer !important;
+        z-index: 1010 !important;
+    }
+
+    /* 2. Style the hidden mobile dropdown drawer drawer */
+    .nav-links {
+        display: none !important; /* Kept hidden by default */
+        flex-direction: column !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        width: 100% !important;
+        background-color: var(--bg-secondary) !important;
+        padding: 20px !important;
+        gap: 15px !important;
+        border-top: 1px solid var(--bg-accent) !important;
+        box-shadow: var(--card-shadow) !important;
+        z-index: 1005 !important;
+        margin: 0 !important;
+    }
+
+    /* 3. CRITICAL FIX: The active selector to make it open */
+    .nav-links.active {
+        display: flex !important; /* Overrides the display none perfectly on tap */
+    }
+
+    /* 4. Link item layout adjustments inside mobile drawer */
+    .nav-links li {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .nav-links a {
+        display: block !important;
+        padding: 12px !important;
+        font-size: 1.2rem !important;
+        color: var(--text-primary) !important;
+        text-decoration: none !important;
+        width: 100% !important;
+    }
+
+    /* 5. Force the main hero area to cascade beneath the open menu drawer */
+    .hero {
+        padding: 4rem 5% 3rem !important;
+    }
+}
+
+/* ==========================================================================
+   MOBILE NAVIGATION RESPONSIVE BREAKPOINT (Under 768px screens)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* Show the hamburger icon */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Transform the horizontal link row into a hidden mobile dropdown panel */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Sits cleanly directly beneath the sticky navbar line */
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-secondary);
+        padding: 1.5rem 5%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        gap: 15px;
+    }
+
+    /* CRITICAL ELEMENT FIX: Displays the panel layout row when active class is toggled via JS */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Stack individual links centered and clear room for thumbs to tap */
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+        padding: 5px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}
+
+
+/* ==========================================================================
+   REGISTRATION PORTAL STYLES
+   ========================================================================== */
+#register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 140px); /* Subtracts header/footer height to center vertically */
+    padding: 3rem 5%;
+    background-color: var(--bg-primary, #f9f9f9);
+}
+
+.reg-container {
+    width: 100%;
+    max-width: 750px; /* Restricts the card width on large screens */
+    background-color: var(--bg-secondary, #ffffff);
+    padding: 2.5rem;
+    border-radius: 16px; /* Smooth card corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Soft drop shadow */
+}
+
+#regForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Balanced spacing between form groups */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Spacing between label and input */
+    width: 100%;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text-primary, #333333);
+    text-align: left;
+}
+
+/* Styled Inputs, Select, and Fields */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px 18px; /* Roomy typing area */
+    font-size: 1.1rem; /* Increased readable text size */
+    border: 1.5px solid var(--border-color, #cccccc);
+    border-radius: 10px; /* Softly rounded corners for inputs */
+    background-color: var(--bg-secondary, #ffffff);
+    color: var(--text-primary, #222222);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Input Focus Glow Effects */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--accent-glow, #007bff);
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15); /* Soft premium rings */
+}
+
+/* Standardized Button Layout Overrides */
+#regForm .btn-primary {
+    font-size: 1.15rem; /* Larger button text */
+    padding: 14px;
+    border-radius: 8px; /* Matching rounded corners */
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+
+

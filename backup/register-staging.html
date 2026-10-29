@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staging Register || AlumniFest Afrique 2026</title>
+    <!-- PHOSPHOR ICONS -->
+    <link rel="stylesheet" type="text/css" href="https://jsdelivr.net">
+    <link rel="stylesheet" href="css/alumnifest.css">
+    
+    <!-- FORCED MOBILE MENU DISPLAY PATCH -->
+    <style>
+        @media screen and (max-width: 768px) {
+            .menu-toggle { display: block !important; }
+            nav.navbar ul.nav-links {
+                display: none !important;
+                flex-direction: column !important;
+                position: absolute !important;
+                top: 100% !important; left: 0 !important; width: 100% !important;
+                background-color: #ffffff !important; padding: 1.5rem 5% !important;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important; gap: 15px !important; z-index: 99999 !important;
+            }
+            nav.navbar ul.nav-links.active { display: flex !important; }
+            nav.navbar ul.nav-links li { width: 100% !important; text-align: left !important; display: block !important; }
+            nav.navbar ul.nav-links li a { display: block !important; width: 100% !important; color: #000000 !important; font-size: 1.1rem !important; padding: 8px 0 !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="alufest__logo"><img src="images/logo1.jpeg" alt="AlumniFest Afrique 2026 Logo"></div>
+            <div class="logo">AlumniFest 2026 (Staging)</div>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><i class="ph ph-list"></i></button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Live Form</a></li>
+            <li><a href="register-staging.html">Staging Form</a></li>
+        </ul>
+        <div class="theme__btn" id="themeToggle"><i class="ph ph-sun"></i></div>
+    </nav>
+
+    <section id="register">
+        <h2 class="section-title">Staging Portal (With Image Upload)</h2>
+        <div class="reg-container">
+            <form id="stagingForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" required placeholder="e.g Senator Sahmicit">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" required placeholder="e.g SakSoullo">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="e.g. senator_saksoullo@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required placeholder="e.g. 08012345678">
+                </div>
+                <div class="form-group">
+                    <label for="cohort">Alma mater, Secondary School Association</label>
+                    <input type="text" id="cohort" required placeholder="e.g. Gindiri Old Students Association">
+                </div>
+                <div class="form-group">
+                    <label for="gradSec">Year of Passing Out Secondary</label>
+                    <input type="text" id="gradSec" required placeholder="e.g. 2010">
+                </div>
+                <div class="form-group">
+                    <label for="cohort1">University Alumni Association</label>
+                    <input type="text" id="cohort1" required placeholder="e.g. University of Jos Alumni Association">
+                </div>
+                <div class="form-group">
+                    <label for="gradUni">Year of Graduation University</label>
+                    <input type="text" id="gradUni" required placeholder="e.g. 2015">
+                </div>
+                <div class="form-group">
+                    <label for="passType">Pass Tier</label>
+                    <select id="passType">
+                        <option value="Standard Festival Pass">Standard Festival Pass</option>
+                        <option value="VIP Networking Pass">VIP Networking Pass</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="userImage">Upload Your Portrait Photo</label>
+                    <input type="file" id="userImage" accept="image/*" required>
+                </div>
+                
+                <button type="submit" id="submitBtn" class="btn-primary" style="width: 100%;">Test Extended Registration</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // PASTE YOUR NEW EXTENDED WEB APP URL BETWEEN THE QUOTES BELOW:
+        const googScriptURL = 'https://script.google.com/macros/s/AKfycbxBvWgtxkMOqED8sqeUv7OE9g3oDHhWG8Gv2zjYCqz6WuYsamFZ5EBZ62HBB9ToIoQ99A/exec';
+        
+        // Mobile Navigation Handler
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.querySelector('i').className = navLinks.classList.contains('active') ? 'ph ph-x' : 'ph ph-list';
+            });
+        }
+
+        // Theme Configuration Switcher
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+        if (themeToggle) {
+            const savedTheme = localStorage.getItem('alufest-theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+            themeToggle.querySelector('i').className = savedTheme === 'light' ? 'ph ph-sun' : 'ph ph-moon';
+            themeToggle.addEventListener('click', () => {
+                const newTheme = htmlElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('alufest-theme', newTheme);
+                themeToggle.querySelector('i').className = newTheme === 'light' ? 'ph ph-sun' : 'ph ph-moon';
+            });
+        }
+
+        // Binary Parsing Submission Handler
+        const stagingForm = document.getElementById('stagingForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (stagingForm) {
+            stagingForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const fileInput = document.getElementById('userImage');
+                const file = fileInput.files[0];
+                
+                if (!file) {
+                    alert('Please choose an image file.');
+                    return;
+                }
+
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Uploading to Drive & Sheet...';
+
+                const reader = new FileReader();
+                reader.onload = function(base64Event) {
+                    const base64Data = base64Event.target.result.split(',')[1];
+                    
+                    const payload = {
+                        firstName: document.getElementById('firstName').value,
+                        lastName: document.getElementById('lastName').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        cohort: document.getElementById('cohort').value,
+                        gradSec: document.getElementById('gradSec').value,
+                        cohort1: document.getElementById('cohort1').value,
+                        gradUni: document.getElementById('gradUni').value,
+                        passType: document.getElementById('passType').value,
+                        imageName: file.name,
+                        imageMimeType: file.type,
+                        imageData: base64Data
+                    };
+
+                    fetch(googScriptURL, {
+                        method: 'POST',
+                        body: JSON.stringify(payload)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert('Staging Test Successful! Checked row added into your new Extended Database.');
+                        stagingForm.reset();
+                    })
+                    .catch(error => {
+                        console.error('Staging System Error:', error);
+                        // Using no-cors mode fallback if browser hits preflight blocks
+                        alert('Form submission completed. Please check your new Google sheet to verify entry logging!');
+                        stagingForm.reset();
+                    })
+                    .finally(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = 'Test Extended Registration';
+                    });
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+    </script>
+</body>
+</html>

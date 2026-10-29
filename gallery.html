@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Gallery | AlumniFest Afrique 2026</title>
+    <!-- PHOSPHOR ICONS -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.min.css">
+
+   <script src="https://unpkg.com"></script>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/alumnifest.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="alufest__logo">
+                <img src="images/logo1.jpeg" alt="AlumniFest Afrique 2026 Logo">
+            </div>
+            <div class="logo">AlumniFest Afrique '2026</div>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <i class="ph ph-list"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="hosts.html">Hosts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+        
+        <div class="theme__btn" id="themeToggle">
+            <i class="ph ph-sun"></i>
+        </div>
+    </nav>
+
+    <main class="gallery-wrapper">
+        <header class="gallery-header">
+            <h2 class="section-title">Creating Moments of Impact</h2>
+            <p>Come to the maiden edition of AlumniFest Afrique 2026 and experience the warmth and richness of Plateau State Cultural Heritage. Explore leadership initiatives, and Community Tourism Development Projects from Plateau state and other featured alumni networks.</p>
+        </header>
+
+    
+
+        <!-- Simple, Responsive Card Grid -->
+        <div class="simple-gallery-grid">
+            
+            <!-- Card 1 -->
+            <div class="gallery-card">
+                <div class="card-image-box">
+                    <img src="images/joyce7.jpg" alt="Festival Opening Ceremony">
+                </div>
+                <div class="card-caption">
+                    <h3>Opening Ceremony</h3>
+                    <p>The Rt. Hon. Joyce Lohya Ramnap, mni, Honorable Commissioner for Information and Communication, Plateau State will be welcoming delegates and alumni chapters across Africa at the opening ceremony of AlumniFest Afrique 2026.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="gallery-card">
+                <div class="card-image-box">
+                    <img src="images/sakSoullo.jpeg" alt="Tourism Enterprise Hub Concept">
+                    <!-- <img src="images/dance9.JPG" alt="Tourism Enterprise Hub Concept"> -->
+                </div>
+                <div class="card-caption">
+                    <h3>Enterprise Hub Blueprint</h3>
+                    <p>Convener of AlumniFest Afrique 2026. Sahmicit Solomon (Sak Soullo)</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="gallery-card">
+                <div class="card-image-box">
+                    <img src="images/dance9.jpg" alt="Conveners Meeting">
+                </div>
+                <div class="card-caption">
+                    <h3>Strategic Stakeholders</h3>
+                    <p>Pioneer organizers coordinating event frameworks.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="gallery-card">
+                <div class="card-image-box">
+                    <img src="images/dance4.jpg" alt="Grand Patron Assembly">
+                </div>
+                <div class="card-caption">
+                    <h3>Patrons Summit</h3>
+                    <p>Advisory discussions building local funding infrastructure.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="gallery-card">
+                <div class="card-image-box">
+                    <img src="images/dance8.jpg" alt="Keynote Presentation Panels">
+                </div>
+                <div class="card-caption">
+                    <h3>Pan-African Keynotes</h3>
+                    <p>Discussions framing tourism for modern regional growth.</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="gallery-card">
+                <div class="card-image-box">
+                    <img src="images/dance6.jpg" alt="Dr. Auma Obama Session">
+                </div>
+                <div class="card-caption">
+                    <h3>Community Initiatives</h3>
+                    <p>Advocating for sustainable local economic progress.</p>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="gallery-card">
+                <div class="card-image-box">
+                    <img src="images/sam.png" alt="Arch. Sam Jatau Address">
+                </div>
+                <div class="card-caption">
+                    <h3>Hosts Highlights</h3>
+                    <p>Leadership panels showcasing regional old-student unions.</p>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="gallery-card">
+                <div class="card-image-box">
+                    <img src="images/plo1.jpg" alt="Prof. PLO Lumumba Speech">
+                </div>
+                <div class="card-caption">
+                    <h3>Leadership Panels</h3>
+                    <p>Speeches highlighting unity and institutional networks.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+  
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        function updateThemeIcon(theme) {
+            if (!themeToggle) return;
+            const themeIcon = themeToggle.querySelector('i');
+            if (themeIcon) {
+                themeIcon.className = theme === 'light' ? 'ph ph-sun' : 'ph ph-moon';
+            }
+        }
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (icon) {
+                    icon.className = navLinks.classList.contains('active') ? 'ph ph-x' : 'ph ph-list';
+                }
+            });
+        }
+
+        if (themeToggle) {
+            const savedTheme = localStorage.getItem('alufest-theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('alufest-theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+        }
+    </script>
+
+</body>
+</html>

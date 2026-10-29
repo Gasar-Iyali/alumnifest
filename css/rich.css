@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f7fb;
+  padding: 40px 20px;
+}
+
+.speakers {
+  font-size: 1.4rem;
+  font-weight: 700;
+  align-items: center;
+  margin-left: 22rem;
+  margin-bottom: 1.3rem;
+  color: linear-gradient(to right, rgb(6, 246, 6), rgb(135, 98, 18), red, rgb(166, 118, 6), rgb(6, 246, 6));
+}
+
+/* --- CARD GALLERY GRID --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.card-img {
+  height: 25rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-info {
+  padding: 20px;
+}
+
+.card-info h3 {
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.card-info p {
+  color: #7f8c8d;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* --- MODAL LAYER --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 850px;
+  max-height: 85vh;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-size: 32px;
+  color: #95a5a6;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover {
+  color: #2c3e50;
+}
+
+.modal-title {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 12px;
+}
+
+.modal-body {
+  overflow-y: auto;
+  padding-right: 12px;
+}
+
+/* --- RICH TEXT FLOATING & ALTERNATING ENGINE --- */
+.modal-content-block {
+  margin-bottom: 32px;
+  overflow: hidden; /* Clearfix containing floated elements */
+}
+
+/* Rich Elements Styling inside layout blocks */
+.modal-content-block h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.modal-content-block p {
+  color: #34495e;
+  line-height: 1.7;
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.modal-content-block ul {
+  margin-left: 24px;
+  margin-bottom: 12px;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.modal-content-block li {
+  margin-bottom: 6px;
+}
+
+.modal-content-block a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.modal-content-block a:hover {
+  text-decoration: underline;
+}
+
+.modal-content-block img {
+  width: 45%;
+  max-width: 340px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Odd blocks: Float image Left, text flows Right */
+.modal-content-block:nth-of-type(odd) img {
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 12px;
+}
+
+/* Even blocks: Float image Right, text flows Left */
+.modal-content-block:nth-of-type(even) img {
+  float: right;
+  margin-left: 24px;
+  margin-bottom: 12px;
+}
+
+/* Responsive Collapse Engine */
+@media (max-width: 600px) {
+  .modal-content-block img {
+    width: 100%;
+    max-width: 100%;
+    float: none !important;
+    margin: 0 0 16px 0 !important;
+  }
+}

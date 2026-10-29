@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register || AlumniFest Afrique 2026</title>
+    <!-- PHOSPHOR ICONS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.min.css">
+    
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/alumnifest.css">
+    
+    <!-- FORCED MOBILE MENU DISPLAY PATCH -->
+    <style>
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block !important;
+            }
+            /* Explicitly isolates the mobile link layer panel */
+            nav.navbar ul.nav-links {
+                display: none !important;
+                flex-direction: column !important;
+                position: absolute !important;
+                top: 100% !important;
+                left: 0 !important;
+                width: 100% !important;
+                background-color: #ffffff !important; /* Forces visible backdrop panel */
+                padding: 1.5rem 5% !important;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+                gap: 15px !important;
+                z-index: 99999 !important;
+            }
+            /* Targeted high-specificity rule to break through browser caching */
+            nav.navbar ul.nav-links.active {
+                display: flex !important;
+            }
+            nav.navbar ul.nav-links li {
+                width: 100% !important;
+                text-align: left !important;
+                display: block !important;
+            }
+            nav.navbar ul.nav-links li a {
+                display: block !important;
+                width: 100% !important;
+                color: #000000 !important; /* Guarantees high-contrast readable links */
+                font-size: 1.1rem !important;
+                padding: 8px 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="alufest__logo">
+                <img src="images/logo1.jpeg" alt="AlumniFest Afrique 2026 Logo">
+            </div>
+            <div class="logo">AlumniFest Afrique 2026</div>
+        </div>
+        
+        <!-- Hamburger Menu for Mobile -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <i class="ph ph-list"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="hosts.html">Hosts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+        
+        <div class="theme__btn" id="themeToggle">
+            <i class="ph ph-sun"></i>
+        </div>
+    </nav>
+
+    <section id="register">
+        <h2 class="section-title">Registration Portal</h2>
+        <div class="reg-container">
+            <form id="regForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="e.g Senator Sahmicit">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="e.g SakSoullo">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="e.g. senator_saksoullo@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="e.g. 08012345678">
+                </div>
+                <div class="form-group">
+                    <label for="cohort">Alma mater, Secondary School Old Students Association</label>
+                    <input type="text" id="cohort" name="cohort" required placeholder="e.g. Gindiri Old Students Association">
+                </div>
+                <div class="form-group">
+                    <label for="cohort1">University Alumni Association</label>
+                    <input type="text" id="cohort1" name="cohort1" required placeholder="e.g. University of Jos Alumni Association">
+                </div>
+                <div class="form-group">
+                    <label for="passType">Pass Tier</label>
+                    <select id="passType" name="passType">
+                        <option value="Standard Festival Pass">Standard Festival Pass</option>
+                        <option value="VIP Networking Pass">VIP Networking Pass</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gradSec">Year of Passing Out Secondary:</label>
+                    <input type="text" id="gradSec" name="gradSec" required placeholder="e.g. 2010">
+                </div>
+                <div class="form-group">
+                    <label for="gradUni">Year of Graduation University:</label>
+                    <input type="text" id="gradUni" name="gradUni" required placeholder="e.g. 2015">
+                </div>
+                <div class="form-group">
+                    <label for="userImage">Upload Your Portrait Photo:</label>
+                    <input type="file" id="userImage" name="userImage" accept="image/*" required>
+                </div>
+                
+                <button type="submit" id="submitBtn" class="btn-primary" style="width: 100%;">Register Now for AlumniFest Afrique 2026</button>
+            </form>
+        </div>
+    </section>
+  
+    <footer>
+        <p>Website by Zack Amata 08026005667 || &copy; AlumniFest Afrique 2026. Building Africa Through Alumni || Harnessing Tourism for Development.</p>
+    </footer>
+
+    <!-- SYSTEM FUNCTION SCRIPTS -->
+    <script>
+        // Paste your designated Google Apps Script Web App Endpoint URL inside the quotes below
+        // const googScriptURL = 'https://script.google.com/macros/s/AKfycbx_8kL1jZo6TGpeTYGu0DSeT2ZYQmU7hqsccNL8m6lQcRDHJqLLtVzKbKhY8mkyQGxA/exec';
+
+        
+// const googScriptURL = 'https://script.google.com/macros/s/AKfycbx_8kL1jZo6TGpeTYGu0DSeT2ZYQmU7hqsccNL8m6lQcRDHJqLLtVzKbKhY8mkyQGxA/exec';//
+
+  const googScriptURL = 'https://script.google.com/macros/s/AKfycbxtgu48t_YGdMw7jC0mOseb3NzD9xUiGDTH1dDvsgpKF17CsrrrYNsP4dK8MPn6k9y9Ow/exec';
+        
+        
+        // 1. Mobile Hamburger Toggler
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.className = 'ph ph-x';
+                } else {
+                    icon.className = 'ph ph-list';
+                }
+            });
+        }
+
+        // 2. Theme Switcher Engine
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        function updateThemeIcon(theme) {
+            if (!themeToggle) return;
+            const themeIcon = themeToggle.querySelector('i');
+            if (themeIcon) {
+                themeIcon.className = (theme === 'light') ? 'ph ph-sun' : 'ph ph-moon';
+            }
+        }
+
+        if (themeToggle) {
+            const savedTheme = localStorage.getItem('alufest-theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('alufest-theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+        }
+
+        // 3. Unified Form Processing Engine (Handles Data + Base64 Upload)
+        const regForm = document.getElementById('regForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (regForm) {
+            regForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const fileInput = document.getElementById('userImage');
+                const file = fileInput.files[0];
+                
+                if (!file) {
+                    alert('Please upload your portrait photo before submitting.');
+                    return;
+                }
+
+                // Visual loading state change
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Uploading Portrait & Submitting Entry...';
+
+                const reader = new FileReader();
+                
+                reader.onload = function(base64Event) {
+                    // Extract clean Base64 string payload without metadata schemas
+                    const base64Data = base64Event.target.result.split(',')[1];
+                    
+                    const payload = {
+                        firstName: document.getElementById('firstName').value,
+                        lastName: document.getElementById('lastName').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        cohort: document.getElementById('cohort').value,
+                        cohort1: document.getElementById('cohort1').value,
+                        passType: document.getElementById('passType').value,
+                        gradSec: document.getElementById('gradSec').value,
+                        gradUni: document.getElementById('gradUni').value,
+imageName: file.name,
+imageMimeType: file.type,
+imageData: base64Data
+};
+fetch(googScriptURL, {
+method: 'POST',
+mode: 'no-cors', // Prevents CORS preflight blocks across domains
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify(payload)
+})
+.then(() => {
+alert('Success! Thank you, ' + payload.firstName + '. Your registration has been saved.');
+regForm.reset();
+})
+.catch(error => {
+console.error('System Submission Error:', error);
+alert('Submission error. Please verify configuration endpoints.');
+})
+.finally(() => {
+submitBtn.disabled = false;
+submitBtn.innerText = 'Register Now for AlumniFest Afrique 2026';
+});
+};
+reader.readAsDataURL(file);
+});
+}

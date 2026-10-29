@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosts || AlumniFest Afrique 2026</title>
+
+    <!-- PHOSPOR IONS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.min.css">
+
+    <script src="https://unpkg.com"></script>
+
+    <!-- CUSTOM STYLESHEET -->
+    <link rel="stylesheet" href="css/alumnifest.css">
+    
+</head>
+<body>
+ <nav class="navbar">
+    <div class="nav-brand">
+        <div class="alufest__logo">
+            <img src="images/logo1.jpeg" alt="AlumniFest Afrique 2026 Logo">
+        </div>
+        <div class="logo">AlumniFest Afrique '2026</div>
+        </div>
+        <!-- Hamburger Menu for Mobile -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <i class="ph ph-list"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="hosts.html">Hosts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+       
+        <div class="theme__btn" id="themeToggle">
+        <i class="ph ph-sun"></i>
+    </div>
+    </nav>
+
+    <div class="container">
+        <h1>Hosts of AlumniFest 2026, Jos. Nigerian version</h1>
+        
+        <!-- 6 Responsive Cards Container -->
+        <div class="grid" id="cardGrid"></div>
+    </div>
+
+    <!-- Modular Dialog Box -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-window">
+            <header class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Project Title</h2>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            </header>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        // Clean structured dynamic showcase data
+        const sampleData = [
+            {
+                id: 1,
+                title: "Architect Samuel Nanchang Jatau",
+                desc: "SSG, Plateau State Government.",
+                images: [
+                    { url: "images/sam1.jpg", caption: "Secretary to the Plateau State Government, Arch Sam Jatau." },
+                    { url: "images/sam7.jpg", caption: "SSG Plateau State" },
+                    { url: "images/sam8.jpg", caption: "SSG Plateau State" },
+                    { url: "images/sam9.jpg", caption: "SSG Plateau State" },
+                    { url: "images/sam10.jpg", caption: "SSG Plateau State" },
+                    { url: "images/sam3.jpg", caption: "SSG Plateau State" },
+                    { url: "images/sam4.jpg", caption: "SSG Plateau State" },
+                    { url: "images/sam5.jpg", caption: "SSG Plateau State" },
+                    { url: "images/sam6.jpg", caption: "SSG Plateau State" },
+                    { url: "images/sam2.jpg", caption: "SSG Plateau State" },
+                    { url: "images/sam2.jpg", caption: "SSG Plateau State" }
+                ],
+                text: ` Born on the 9th of January 1968, in Vom, to the family of Zhembin Jatau of blessed memory and Mama Hanatu Zwanbun Lohor (Gimbiyan Lantang) of Irugwu ruling House, Pil Gani District, in Langtang-North, Local Government Area of Plateau State.
+
+Arch. Jatau showed great enthusiasm to learn early in his life, as he started his Formal education at Fatima Private School Jos, where he received his First School Leaving Certificate.
+
+Thereafter he proceeded to the prestigious Boys’ Secondary School Gindiri, where he completed his Secondary school education in 1984.
+
+He later gained admission into the University of Jos to study Architecture, after which he was awarded a Bachelor of Science Degree in Architecture in 1992.
+
+As a basic requirement for practice, he proceeded to Ahmadu Bello University Zaria for Post-graduate studies and earned a Masters of Science Degree in Architecture in 1995.
+
+Recognizing the importance of computers early in the emerging digital age, Architect Jatau enrolled at the ECWA Information and Computer Science Institute Jos, where he obtained a Post-Graduate Diploma in Computer Application in 1998.
+
+Architect Samuel Nanchang Jatau started cutting his teeth in his dream profession during his service with the National Youth Service Corps (NYSC), when he was deployed to the Federal Capital Development Authority (FCDA), Public Works Department, Abuja.
+
+While serving there, he was exposed to challenging assignments and rose to the occasion and distinguished himself to the admiration of his colleagues and supervisors.
+
+From the year 1997 – 2000, he was engaged in extensive private practice where he executed numerous projects, some of which include the design of the auditorium and offices for National Council for Women Societies Headquarters Abuja, the design and construction of various residential buildings, the construction of blocks of classrooms and the fabrication of furniture for SUBEB.
+
+In the year 2000, he joined the service of the Plateau State Government where he has worked till his resignation from service early in the year 2018.
+
+Through the Grace of God, hard work, and display of professionalism on duties assigned to him by the Plateau State Government, Architect Jatau rose to the Directorate cadre in the Ministry of Housing. Within this period, he served as Project Architect, in charge of construction, or renovation of numerous projects. Some of these projects are the Plateau State Liaison Office Complex (seven storey) Abuja, Plateau State Old Government House Jos, Plateau State Governors Lodge Abuja, Plateau State Water Board Headquarters (ADB funded) Jos, Human Virology Center, Plateau Specialist Hospital Jos, J.C. Dariye Lodge Jos, and the School of Nursing and Midwifery Vom.
+
+Other projects Architect Jatau was involved in are the Presidential Lodge Rayfield Jos, New Government House Little Rayfield Jos, Zaria Road Stadium Complex Jos, Health and Education Projects (Northern Zone), amongst many others.
+
+Several times he has also been saddled with the responsibilities of membership of Ministerial Tenders Board. He has also represented the Ministry of Works on the Governing Councils of the Plateau State Polytechnic Barkin Ladi, Plateau State College of Agriculture Garkawa, and board of the Plateau State Emergency Relief Committee, amongst others, where he displayed outstanding capacity, competence, dedication and commitment as a thoroughbred bureaucrat.
+
+He is a member of the Nigerian Institute of Architects (NIA), Member of Gindiri Old Students Association (GOSA), he is the Zonal Secretary of Christians Couples Fellowship, Member of the Building Committee of the Church of Christ in Nations (COCIN) Headquarters Church Jos (2006-2017).
+
+He has been a member of the Rotract Club and the Boys Brigade.
+A devoted father, Architect Jatau is married to Ulan Jatau, his jewel of inestimable value.
+
+He speaks Tarok, Hausa, English fluently, and a working knowledge of Berom.
+As a cosmopolitan, experienced Architect, project manager, and IT savvy gentleman, he has hinged his passion for positive “SHIFT” from the current state of things in Plateau State, to the divine values of his Faith.
+
+Indeed, he is a man driven by the beauty and power of his dreams.
+In the many roles he has played in life, he has raised his mark for the good of humanity, with Grace, and with a deep sense of purpose. Contemporary architectural philosophy recognizes that the relationship between natural daylight matrices and interior spatial orientation plays an essential developmental role. This philosophy focuses intensely on spatial luxury created through emptiness rather than sheer volume. By balancing raw organic textures alongside perfectly geometric layouts, contemporary spaces become restorative retreats. The structural elements present an honest narrative regarding load pathways, utility distribution systems, and geographic spatial context over prolonged development horizons.`
+            },
+            {
+                id: 2,
+                title: "Dr Gad Shamaki Peter",
+                desc: "Worldwide President University of Jos Alumni Association.",
+                images: [
+                    { url: "images/gad14.jpg", caption: "Dr. Gad Shamaki Peter, Worldwide President University of Jos Alumni Association." },
+                    { url: "images/gad2.jpg", caption: "Dr. Gad Shamaki Peter." },
+                    { url: "images/gad3.jpg", caption: "Dr. Gad Shamaki Peter." },
+                    { url: "images/gad4.jpg", caption: "Dr. Gad Shamaki Peter." },
+                    { url: "images/gad5.jpg", caption: "Dr. Gad Shamaki Peter." },
+                    { url: "images/gad6.jpg", caption: "Dr. Gad Shamaki Peter." },
+                    { url: "images/gad7.jpg", caption: "Dr. Gad Shamaki Peter." },
+                    { url: "images/gad8.jpg", caption: "Dr. Gad Shamaki Peter." },
+                    { url: "images/gad9.jpg", caption: "Dr. Gad Shamaki Peter." },
+                    { url: "images/gad10.jpg", caption: "Dr. Gad Shamaki Peter." },
+                    { url: "images/gad11.jpg", caption: "Dr. Gad Shamaki Peter." },
+                    { url: "images/gad1.jpg", caption: "Dr. Gad Shamaki Peter." }
+                ],
+                text: `A NIGERIAN PUBLIC SPEAKER AND HUMAN RIGHTS ACTIVIST, GAD PETER SHAMAKI TURNS 47 TODAY.
+On this day in 1976, a
+
+Nigerian Public Speaker, Human Rights and social development activist, Gad Peter Shamaki was born in Bauchi, Bauchi State Northeast Nigeria.
+
+Mr Shamaki attended Federal Government Girls College Staff Primary school in Bauchi and Saint Gabriel Secondary in Makurdi Benue state, for his primary and secondary education respectively.
+He studied Sociology at the University Of Jos where he graduated with honours in 2001.
+He also has a Masters degree and is currently running a PhD program on Gender studies with the University of Jos.
+
+Dr Gad Shamaki Peter has been actively involved in development work with over 20 years experience as a professional development activist with core experience in peace building, community mobilization, human rights, budget tracking and monitoring.
+He also has credentials in gender advocacy and reproductive health, education, democracy and good governance.
+He is a certified chartered mediator and conciliator, Trainer, Strategist and Leadership Expert with several publications, papers and presentations to his credit.
+Mr Shamaki has work experience with several local and international Non-Governmental Organizations, some among them are British Council, Creative Associates International and Equal Access International.
+He has been a member of several committees set up by the government at various levels and currently a member of the Plateau State Open Governance Partnership.
+As an advocate of social change, Mr Shamaki led and supported several organizations and coalitions to sponsor pro development bills that are functional laws in Plateau state and the country today.
+Mr Shamaki holds the firm conviction that there should be accountability and transparency in government business and that the rule of law must be given prominence in human society.
+Dr Shamaki is a member, Board Of Trustees of several organizations.`
+
+            },
+            {
+                id: 3,
+                title: "RT. HON.Joyce Lohya Ramnap, mni ",
+                desc: "Commissioner for Information and Communications, Plateau State Government.",
+                images: [
+                    { url: "images/joyce1.jpg", caption: "RT. HON.Joyce Lohya Ramnap, mni , Commissioner for Information and Communications, Plateau State Government." },
+                    { url: "images/joyce7.jpg", caption: "RT. HON.Joyce Lohya Ramnap, mni." },
+                    { url: "images/joyce8.jpg", caption: "RT. HON.Joyce Lohya Ramnap, mni." },
+                    { url: "images/joyce2.jpg", caption: "RT. HON.Joyce Lohya Ramnap, mni." },
+                    { url: "images/joyce3.jpg", caption: "RT. HON.Joyce Lohya Ramnap, mni." },
+                    { url: "images/joyce4.jpg", caption: "RT. HON.Joyce Lohya Ramnap, mni." },
+                    { url: "images/joyce5.jpg", caption: "RT. HON.Joyce Lohya Ramnap, mni." },
+                    { url: "images/joyce6.jpg", caption: "RT. HON.Joyce Lohya Ramnap, mni." }
+                ],
+                text: `Rt. Hon. Rt. Hon. Joyce Lohya Ramnap, mni is the Plateau State Commissioner for Information and Communication and a prominent Nigerian public servant and politician. She has been a key figure in the Plateau State Government, contributing to policy development and public communication strategies. Her work focuses on enhancing transparency, promoting civic engagement, and leveraging technology to improve government services. With a background in public administration and a commitment to community development, Commissioner Ramnap has played a significant role in shaping the information landscape of Plateau State, ensuring that citizens are well-informed and actively involved in governance processes.
+
+        Early Life and Background
+
+        Born February 1975 (celebrated her 50th birthday in February 2025).
+        • A member of the prestigious National Institute (mni), having graduated/trained from the National Institute for Policy and Strategic Studies (NIPSS), Kuru.
+        Political and Legislative Career
+        • Plateau State House of Assembly: Served as a member representing her constituency from 2007 to 2015.
+        • Deputy Speaker: Held the position of Deputy Speaker of the Plateau State House of Assembly between 2013 and 2015.
+        • Advocacy: Served as Secretary of the Female Parliamentarians of Nigeria in 2008, actively championing women's representation in politics.
+        Executive Appointment
+        • Commissioner for Information and Communication: Appointed to the position in February 2025 by Plateau State Governor Caleb Manasseh Mutfwang.
+        • Milestone: She is only the second female to occupy the office of Information Commissioner in the history of Plateau State.
+        • Additional Roles: Has also functioned in supervising capacities such as for the Ministry of Tourism, Culture and Hospitality.`
+            },
+            {
+                id: 4,
+                title: "Lorem Ipsum",
+                desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+                images: [
+                    { url: "https://picsum.photos", caption: "Weathered steel support configurations refitted to accommodate open design workspaces." },
+                    { url: "https://picsum.photos", caption: "A historical brick facade integrating modular thermal glass panel additions." }
+                ],
+                text: "Adaptive reuse projects breathe new functionality into outdated structures without wiping away historical architectural value. Disused manufacturing facilities provide massive structural advantages like tall ceilings, durable brickwork, and modular open-floor plans. Designers can utilize these raw spaces to build multi-tiered creative workplaces, galleries, or hybrid residential units. This methodology actively honors the industrial histories of local blue-collar spaces while preventing unnecessary resource depletion. The balance between oxidised metals and brand-new minimalist materials creates a unique aesthetic style. This aesthetic explicitly celebrates past engineering achievements while prioritizing clean, modern, energy-efficient living standards."
+            },
+            {
+                id: 5,
+                title: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+                desc: "An inspection of Fibonacci sequencing and patterns in natural flora.",
+                images: [
+                    { url: "https://picsum.photos", caption: "Perfect spiral phyllotaxis observed within dense desert succulent formations." },
+                    { url: "https://picsum.photos", caption: "Venation architecture optimizing fluid transport structures across tropical leaf surfaces." }
+                ],
+                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, delectus asperiores dicta eius, aut repellat illum perferendis voluptate ea unde, quis similique dolores ipsum doloribus molestiae sequi? Nam hic eaque earum reprehenderit provident fugit voluptate incidunt inventore at exercitationem enim, beatae minus aliquam ipsam fugiat maiores asperiores a, soluta quas."
+            },
+            {
+                id: 6,
+                title: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+                desc: "Stripping away hue data to reveal high-contrast tonal realities.",
+                images: [
+                    { url: "https://picsum.photos", caption: "Deep shadows creating stark abstract geometric patterns across sand dune horizons." },
+                    { url: "https://picsum.photos", caption: "Atmospheric cloud gradients filtering stark linear morning light rays." }
+                ],
+                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, delectus asperiores dicta eius, aut repellat illum perferendis voluptate ea unde, quis similique dolores ipsum doloribus molestiae sequi? Nam hic eaque earum reprehenderit provident fugit voluptate incidunt inventore at exercitationem enim, beatae minus aliquam ipsam fugiat maiores asperiores a, soluta quas."
+            }
+        ];
+
+        const cardGrid = document.getElementById('cardGrid');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = document.getElementById('modalBody');
+        const modalClose = document.getElementById('modalClose');
+
+        // Render 6 Responsive Cards (Fixed index target mapping)
+        function renderCards() {
+            cardGrid.innerHTML = sampleData.map(item => `
+                <div class="card" onclick="openModal(${item.id})">
+                    <div class="card-image-wrapper">
+                        <img src="${item.images[0].url}" alt="${item.title}" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">${item.title}</h3>
+                        <p class="card-description">${item.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Open Modal with clean Alternating Wrapping Text Layout
+        function openModal(id) {
+            const data = sampleData.find(item => item.id === id);
+            if (!data) return;
+
+            modalTitle.textContent = data.title;
+
+            // Distribute long copy evenly across images for true wrapping floats
+            const textParagraphs = splitText(data.text, data.images.length);
+            let combinedHTML = '';
+
+            data.images.forEach((img, index) => {
+                const alignmentClass = (index % 2 === 0) ? 'float-left' : 'float-right';
+                combinedHTML += `
+                    <figure class="inline-figure ${alignmentClass}">
+                        <img src="${img.url}" alt="Showcase element ${index + 1}">
+                        <figcaption class="inline-caption">${img.caption}</figcaption>
+                    </figure>
+                    <p>${textParagraphs[index] || ''}</p>
+                `;
+            });
+
+            // Append any surplus paragraph blocks if present
+            for (let i = data.images.length; i < textParagraphs.length; i++) {
+                combinedHTML += `<p>${textParagraphs[i]}</p>`;
+            }
+
+            modalBody.innerHTML = combinedHTML;
+
+            // Trigger Entry Animations safely
+            modalOverlay.classList.add('active');
+            modalOverlay.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            modalClose.focus();
+        }
+
+        // Helper split processor to balance text block wrapping
+        function splitText(text, chunksCount) {
+            const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+            const size = Math.ceil(sentences.length / chunksCount);
+            const chunks = [];
+
+            for (let i = 0; i < chunksCount; i++) {
+                const chunkSentences = sentences.slice(i * size, (i + 1) * size);
+                chunks.push(chunkSentences.join(' '));
+            }
+
+            return chunks;
+        }
+
+        // Close functions
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            modalOverlay.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Start
+        renderCards();
+    </script>
+        <!-- SYSTEM FUNCTION SCRIPTS -->
+    <script>
+        // 1. Mobile Hamburger Toggler
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.className = 'ph ph-x';
+                } else {
+                    icon.className = 'ph ph-list';
+                }
+            });
+        }
+
+        // 2. Theme Switcher Engine
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        function updateThemeIcon(theme) {
+            if (!themeToggle) return;
+            const themeIcon = themeToggle.querySelector('i');
+            if (themeIcon) {
+                if (theme === 'light') {
+                    themeIcon.className = 'ph ph-sun';
+                } else {
+                    themeIcon.className = 'ph ph-moon';
+                }
+            }
+        }
+
+        if (themeToggle) {
+            const savedTheme = localStorage.getItem('alufest-theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('alufest-theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+        }
+    </script>
+    </body> 
+    </html>
