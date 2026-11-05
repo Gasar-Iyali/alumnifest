@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | AlumniFest Afrique 2026</title>
+    <!-- PHOSPHOR ICONS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.min.css">
+
+    <script src="https://unpkg.com"></script>
+    <!-- FAVICON -->
+     <link rel="icon" type="image/x-icon" href="images/logo1.jpeg">
+     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/alumnifest.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="alufest__logo">
+                <img src="images/logo1.jpeg" alt="AlumniFest Afrique 2026 Logo">
+            </div>
+            <div class="logo">AlumniFest Afrique '2026</div>
+        </div>
+        
+        <!-- Hamburger Menu for Mobile -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <i class="ph ph-list"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="hosts.html">Hosts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="project.html">Development Project</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+        
+        <div class="theme__btn" id="themeToggle">
+            <i class="ph ph-moon"></i>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Building Africa Through Alumni,<br><span>Harnessing<br> Tourism for Development</span></h1>
+        <h4>Uniting Leadership, Celebrating Impact</h4>
+        <p>The premier reunion gathering for trailblazing African alumni across the globe. Reconnect, innovate, and drive change.</p>
+        
+        <img src="images/raise_750.jpg" alt="">
+
+        <a href="register.html" class="btn-primary">Register for AlumniFest Afrique 2026</a>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About the Festival</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <img src="images/pg1.jpeg" alt="Festival Overview">
+                <div class="about-text">
+                    <p>AlumniFest Afrique 2026 brings together thought leaders, cultural icons, entrepreneurs, and global changemakers from academic and professional communities across Africa.</p>
+                    <p>Over three days, experience powerful keynotes, structural networking mixers, a dynamic tech showcase, and celebratory cultural performances highlighting the strategic impact of African excellence.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-grid">
+            <div class="about-card">
+                <img src="images/pg2.jpeg" alt="Concepts">
+                <div class="about-text">
+                    <h2 class="who_is">WHO IS ALUMNIFEST AFRIQUE CONCEPTS?</h2>
+                    <p><strong>ALUMNIFEST AFRIQUE (ALUMNIFEST AFRIQUE 2026)</strong> is an alumni movement and annual gathering.</p>
+                    
+                    <h3>Purpose:</h3>
+                    <p>Building Africa Through Alumni—bringing alumni from different schools and generations together to drive development in our communities, not just for our alma maters.</p>
+                    
+                    <h3>How it works:</h3>
+                    <ol>
+                        <li><strong>Rotating Hosts:</strong> Every year, a different alumni group hosts. First edition 2026 is in Jos with GOSA and UJAA as pioneer hosts. Next year it moves to Abuja with another alumni group.</li>
+                        <li><strong>Focus Projects:</strong> Each edition launches a development project tied to the theme. For 2026 the sub-theme is Establishing Tourism for Development. The project is the Community Tourism, Enterprise Hub with Learning Centre supported through the Derek Joy Foundation.</li>
+                        <li><strong>Structure:</strong> The Hub runs 8 Blocks: Admin, Primary School, Digital Labs, Library, Clinic, Sports, and Enterprise & Skills Block with a training Café.
+                            <ul>
+                                <li>*Children attend from 8am–12pm</li>
+                                <li>*Youth skills training open from 1am–4pm</li>
+                                <li>*Tourism enterprise hub open from 8am till 7pm</li>
+                            </ul>
+                        </li>
+                        <li><strong>Alumni Funding:</strong> Alumni groups fund the project through ticket sales, sponsorships, and donations. (*Ticket sales are for the festival and not for the project)</li>
+                        <li><strong>Sustainability:</strong> Alumni groups continue to support the project through mentorship programs. (*The project is not a one-off but a sustainable initiative for the community.)</li>
+                    </ol>
+                    <p><strong>In short:</strong> ALUMNIFEST AFRIQUE is alumni coming together as one force to fund, build, and sustain projects in education, enterprise, and tourism across Africa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SYSTEM FUNCTION SCRIPTS -->
+    <script>
+        // 1. Safe Mobile Hamburger Toggler
+         // 1. Mobile Hamburger Toggler
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.className = 'ph ph-x';
+                } else {
+                    icon.className = 'ph ph-list';
+                }
+            });
+        }
+
+        // 2. Theme Switcher Engine
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        function updateThemeIcon(theme) {
+            if (!themeToggle) return;
+            const themeIcon = themeToggle.querySelector('i');
+            if (themeIcon) {
+                if (theme === 'light') {
+                    themeIcon.className = 'ph ph-sun';
+                } else {
+                    themeIcon.className = 'ph ph-moon';
+                }
+            }
+        }
+
+        if (themeToggle) {
+            const savedTheme = localStorage.getItem('alufest-theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('alufest-theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+        
+                } else {
+                    themeIcon.className = 'ph ph-moon';
+                }
+
+        // 3. Isolated Live Countdown Timer Logic
+        function startFestivalCountdown() {
+            const targetDate = new Date("December 17, 2026 00:00:00").getTime();
+
+            const daysEl = document.getElementById("days");
+            const hoursEl = document.getElementById("hours");
+            const minutesEl = document.getElementById("minutes");
+            const secondsEl = document.getElementById("seconds");
+
+            // Exit cleanly if elements aren't present on this specific page instead of throwing an error
+            if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+            function updateCounter() {
+                const now = new Date().getTime();
+                const absoluteDistance = targetDate - now;
+
+                if (absoluteDistance < 0) {
+                    clearInterval(countdownInterval);
+                    daysEl.innerText = "00";
+                    hoursEl.innerText = "00";
+                    minutesEl.innerText = "00";
+                    secondsEl.innerText = "00";
+                    return;
+                }
+
+                const days = Math.floor(absoluteDistance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((absoluteDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((absoluteDistance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((absoluteDistance % (1000 * 60)) / 1000);
+
+                daysEl.innerText = String(days).padStart(2, '0');
+                hoursEl.innerText = String(hours).padStart(2, '0');
+                minutesEl.innerText = String(minutes).padStart(2, '0');
+                secondsEl.innerText = String(seconds).padStart(2, '0');
+            }
+
+            updateCounter();
+            const countdownInterval = setInterval(updateCounter, 1000);
+        }
+
+        window.addEventListener("DOMContentLoaded", startFestivalCountdown);
+    </script>
+    
+</body>
+</html>

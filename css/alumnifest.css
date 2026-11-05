@@ -9,8 +9,10 @@
     --bg-secondary: #ffffff;
     --bg-accent: #f1f5f9;
     --text-primary: #0f172a;
+    --text-primary2: #ffffff;
     --text-secondary: #64748b;
     --accent-glow: #e11d48;
+    --accent-glow2: #eec64b;
     --gradient-primary: linear-gradient(to right, rgb(6, 246, 6), rgba(206, 206, 6, 0.927), red, yellow, rgb(6, 246, 6));
     --gradient-primary2: linear-gradient(to right, rgb(6, 246, 6), rgb(135, 98, 18), red, rgb(166, 118, 6), rgb(6, 246, 6));
     --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -64,7 +66,10 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: var(--bg-secondary);
+    background-color: #1699f6;
+    /* background-color: var(--bg-secondary); */
+    color: var(--text-primary2);
+    /* color: var(--text-primary); */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -79,8 +84,8 @@ img {
 
 /* Completely Round Logo Implementation */
 .alufest__logo {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--logo-border);
@@ -99,7 +104,7 @@ img {
 .logo {
     font-weight: 700;
     font-size: 1.1rem;
-    color: var(--text-primary);
+    color: var(--text-primary2);
 }
 
 .nav-links {
@@ -109,14 +114,14 @@ img {
 }
 
 .nav-links a {
-    color: var(--text-primary);
+    color: var(--text-primary2);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: var(--accent-glow);
+    color: var(--accent-glow2);
 }
 
 .theme__btn {
@@ -225,6 +230,11 @@ img {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
+.qrcode {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 /* START HOSTS MODAL STYLES */
         :root {

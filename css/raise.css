@@ -1,0 +1,741 @@
+/* ==========================================================================
+   SAMIYA COMMUNITY TOURISM, ENTERPRISE HUB & LEARNING CENTRE
+   Stylesheet: raise.css
+   ========================================================================== */
+
+/* --- 1. CSS Reset & Base Variables --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --brand-green: #0F5132;
+    --brand-green-dark: #064e3b;
+    --brand-gold: #D97706;
+    --brand-dark: #111827;
+    --bg-light: #F9FAFB;
+    --text-main: #1F2937;
+    --text-muted: #6B7280;
+    --border-color: #E5E7EB;
+    --radius-lg: 16px;
+    --radius-md: 12px;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 2. Top Banner --- */
+.top-banner {
+    background-color: var(--brand-dark);
+    color: #ffffff;
+    font-size: 0.85rem;
+    padding: 12px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+.top-banner p {
+    font-style: italic;
+}
+
+.quote-icon {
+    color: var(--brand-gold);
+    margin: 0 6px;
+    opacity: 0.85;
+}
+
+/* --- 3. Navigation Header --- */
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--brand-green);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.5rem;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.brand-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--brand-dark);
+    line-height: 1.2;
+}
+
+.brand-subtitle {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4B5563;
+}
+
+.nav-links a:hover {
+    color: var(--brand-green);
+    transition: color 0.2s ease;
+}
+
+/* --- 4. Buttons --- */
+.btn-donate {
+    background-color: var(--brand-gold);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px -1px rgba(217, 119, 6, 0.3);
+    transition: all 0.2s ease;
+}
+
+.btn-donate:hover {
+    background-color: #b45309;
+    box-shadow: 0 6px 12px -1px rgba(217, 119, 6, 0.4);
+    transform: translateY(-1px);
+}
+
+.btn-hero-primary {
+    background-color: var(--brand-gold);
+    color: #ffffff;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: var(--radius-md);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-hero-primary:hover {
+    background-color: #b45309;
+    transform: translateY(-2px);
+}
+
+.btn-hero-secondary {
+    background-color: rgba(6, 78, 59, 0.8);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 14px 24px;
+    border-radius: var(--radius-md);
+    border: 1px solid #059669;
+    transition: all 0.2s ease;
+}
+
+.btn-hero-secondary:hover {
+    background-color: var(--brand-green-dark);
+}
+
+/* --- 5. Hero Section --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-green-dark) 100%);
+    color: #ffffff;
+    padding: 64px 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 7fr 5fr;
+    }
+}
+
+.badge-tenant {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(6, 95, 70, 0.6);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #A7F3D0;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 640px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    color: #D1FAE5;
+    font-weight: 300;
+    margin-bottom: 24px;
+}
+
+.text-gold {
+    color: var(--brand-gold);
+    font-weight: 700;
+}
+
+.partner-box {
+    border-top: 1px solid rgba(4, 120, 87, 0.5);
+    padding-top: 16px;
+    margin-bottom: 24px;
+}
+
+.partner-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6EE7B7;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.partner-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* --- 6. Image Placeholders & Image Safe Handling --- */
+.image-placeholder {
+    background-color: #F3F4F6;
+    border: 2px dashed #CBD5E1;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+    color: var(--text-muted);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.image-placeholder:hover {
+    border-color: var(--brand-green);
+    background-color: #F0FDF4;
+}
+
+.image-placeholder.hero-placeholder {
+    height: 380px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(52, 211, 153, 0.4);
+    color: #ffffff;
+}
+
+.placeholder-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    color: #A7F3D0;
+}
+
+.placeholder-title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.placeholder-subtitle {
+    font-size: 0.75rem;
+    color: #A7F3D0;
+    margin-top: 4px;
+}
+
+/* --- 7. Operating Hours Section --- */
+.hours-section {
+    padding: 48px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.section-header-center {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--brand-dark);
+}
+
+.section-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .hours-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.hours-card {
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    border: 1px solid transparent;
+}
+
+.hours-card.children {
+    background-color: #ECFDF5;
+    border-color: #D1FAE5;
+}
+
+.hours-card.skills {
+    background-color: #FFFBEB;
+    border-color: #FEF3C7;
+}
+
+.hours-card.tourism {
+    background-color: #EFF6FF;
+    border-color: #DBEAFE;
+}
+
+.hours-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.hours-card.children .hours-icon { background-color: var(--brand-green); }
+.hours-card.skills .hours-icon { background-color: var(--brand-gold); }
+.hours-card.tourism .hours-icon { background-color: #2563EB; }
+
+.hours-time {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 4px 0;
+}
+
+.hours-card.children .hours-time { color: var(--brand-green); }
+.hours-card.skills .hours-time { color: var(--brand-gold); }
+.hours-card.tourism .hours-time { color: #2563EB; }
+
+.hours-desc {
+    font-size: 0.75rem;
+    color: #4B5563;
+}
+
+/* --- 8. 14 Core Blocks Section --- */
+.blocks-section {
+    padding: 64px 0;
+    background-color: var(--bg-light);
+}
+
+.section-header-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+    .section-header-flex {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
+.section-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--brand-green);
+}
+
+.blocks-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 640px) {
+    .blocks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .blocks-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.block-card {
+    background-color: #ffffff;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid #F3F4F6;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease;
+}
+
+.block-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.block-card .image-placeholder {
+    height: 180px;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px dashed #E2E8F0;
+    flex-shrink: 0;
+}
+
+.block-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-grow: 1;
+}
+
+.block-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--brand-green);
+    background-color: #ECFDF5;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.block-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--brand-dark);
+    margin-top: 4px;
+}
+
+.block-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* --- 9. Allocation Section --- */
+.allocation-section {
+    padding: 64px 0;
+    background-color: #ffffff;
+}
+
+.allocation-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .allocation-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.progress-group {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 6px;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    background-color: #F3F4F6;
+    height: 12px;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+}
+
+.progress-bar-fill.hub { background-color: var(--brand-green); width: 70%; }
+.progress-bar-fill.gosa { background-color: var(--brand-gold); width: 20%; }
+.progress-bar-fill.alumnifest { background-color: #2563EB; width: 10%; }
+
+.progress-subtext {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+    margin-top: 4px;
+}
+
+/* --- 10. Donation Tiers & Bank Section --- */
+.donate-section {
+    padding: 64px 0;
+    background: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-green-dark) 100%);
+    color: #ffffff;
+}
+
+.tiers-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+@media (min-width: 640px) {
+    .tiers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .tiers-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.tier-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tier-card.legacy {
+    background-color: var(--brand-gold);
+    color: var(--brand-dark);
+    border: none;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.tier-number {
+    color: var(--brand-gold);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.tier-card.legacy .tier-number {
+    color: rgba(17, 24, 39, 0.8);
+}
+
+.tier-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-top: 4px;
+}
+
+.tier-amount {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 12px 0;
+}
+
+.tier-desc {
+    font-size: 0.7rem;
+    color: #A7F3D0;
+}
+
+.tier-card.legacy .tier-desc {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.bank-card {
+    background-color: #ffffff;
+    color: var(--brand-dark);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    max-width: 896px;
+    margin: 0 auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.bank-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .bank-grid {
+        grid-template-columns: 7fr 5fr;
+    }
+}
+
+.bank-info-box {
+    background-color: var(--bg-light);
+    padding: 16px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    margin: 16px 0;
+}
+
+.bank-label {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.bank-acc-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--brand-green);
+}
+
+.qr-box {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .qr-box {
+        border-left: 1px solid #F3F4F6;
+        padding-left: 32px;
+    }
+}
+
+.qr-placeholder {
+    width: 176px;
+    height: 176px;
+    margin: 0 auto;
+}
+
+/* --- 11. Footer --- */
+.footer {
+    background-color: var(--brand-dark);
+    color: #9CA3AF;
+    padding: 40px 0;
+    border-top: 1px solid #1F2937;
+    text-align: center;
+}
+
+.hashtags {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #34D199;
+    margin-bottom: 16px;
+}
+
+.footer-credits {
+    font-size: 0.75rem;
+    max-width: 576px;
+    margin: 0 auto 16px auto;
+}
+
+.copyright {
+    border-top: 1px solid rgba(31, 41, 55, 0.6);
+    padding-top: 16px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}

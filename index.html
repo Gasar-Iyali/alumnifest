@@ -7,15 +7,64 @@
     <!-- PHOSPHOR ICONS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.min.css">
 
-    <script src="https://unpkg.com"></script>
     <!-- FAVICON -->
      <link rel="icon" type="image/x-icon" href="images/logo1.jpeg">
      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+     <link rel="manifest" href="/site.webmanifest">
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="css/alumnifest.css">
+    <style>
+        /* Top Action Cards Styling */
+        .top-cards-container {
+            max-width: 1100px;
+            margin: 2rem auto 1rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .top-action-card {
+            background: var(--bg-card, #1699f6);
+            border: 2px solid var(--gold-primary, #D4AF37);
+            border-radius: 16px;
+            padding: 1.8rem;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .top-action-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(212, 175, 55, 0.25);
+        }
+        .top-action-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary, #FFF);
+        }
+        .top-action-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted, #A3B899);
+            margin-bottom: 1.2rem;
+        }
+        .card-link-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--gold-gradient, linear-gradient(135deg, #FFE082 0%, #D4AF37 50%, #B38728 100%));
+            color: #07130E;
+            font-weight: 700;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .card-link-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,7 +73,7 @@
             <div class="alufest__logo">
                 <img src="images/logo1.jpeg" alt="AlumniFest Afrique 2026 Logo">
             </div>
-            <div class="logo">AlumniFest Afrique '2026</div>
+            <div class="logo">AlumniFest Afrique 2026</div>
         </div>
         
         <!-- Hamburger Menu for Mobile -->
@@ -38,14 +87,50 @@
             <li><a href="speakers.html">Speakers</a></li>
             <li><a href="hosts.html">Hosts</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="project.html">Development Project</a></li>
+            <li><a href="index4raise.html">Help Us Raise ₦2Billion</a></li>
             <li><a href="register.html">Register</a></li>
         </ul>
         
-        <div class="theme__btn" id="themeToggle">
+        <!-- <div class="theme__btn" id="themeToggle">
             <i class="ph ph-moon"></i>
-        </div>
+        </div> -->
     </nav>
+
+    <!-- NEW: Top Action Cards Section -->
+    <div class="top-cards-container">
+        <!-- Card 1: Theme Song Contest -->
+        <div class="top-action-card">
+            <div>
+                <i class="ph ph-music-notes" style="font-size: 2.5rem; color: var(--gold-primary, #D4AF37); margin-bottom: 0.5rem;"></i>
+                <h3 style="color: white;">AlumniFest Afrique Song Contest</h3>
+                <p class style="color:#000000">Compose our official theme song, weave in unity, light, alumni & Africa, and win N100,000 cash!</p>
+            </div>
+            <a href="song_contest.html" class="card-link-btn">View Contest Details</a>
+        </div>
+
+        <!-- Card 2: Free Registration -->
+       <div class="top-action-card">
+    <div>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 12px; margin-bottom: 1rem;">
+            <img src="images/profile.png" style="width: 50px; height: 50px; object-fit: cover;" alt="Profile">
+            <img src="images/register.png" style="width: 50px; height: 50px; object-fit: cover;" alt="Register">
+        </div>
+        <h3 style="color: white;">AlumniFest Afrique Registration Portal</h3>
+        <p style="color:#000000">Join trailblazing African alumni across the globe. Secure your spot today—<strong>It's Free!!</strong></p>
+    </div>
+    <a href="register.html" class="card-link-btn">Register Now - Free</a>
+</div>
+
+        <!-- Card 3: Help Us Raise ₦2Billion -->
+        <div class="top-action-card">
+            <div>
+                <i class="ph ph-hand-heart" style="font-size: 2.5rem; color: var(--gold-primary, #D4AF37); margin-bottom: 0.5rem;"></i>
+                <h3 style="color: white;">Help Us Raise ₦2Billion</h3>
+                <p style="color:#000000">Tourism Promotes Economic & Financial Growth: Support the SAMIYA Community Tourism, Enterprise Hub & Learning Centre. Your contribution drives sustainable development.</p>
+            </div>
+            <a href="index4raise.html" class="card-link-btn">Contribute Now</a>
+        </div>
+    </div>
 
     <header class="hero">
         <h1>Building Africa Through Alumni,<br><span>Harnessing Tourism for Development</span></h1>
@@ -61,6 +146,15 @@
 
         <a href="register.html" class="btn-primary">Register for AlumniFest Afrique 2026</a>
     </header>
+
+    <section>
+        <h2 style="text-align: center; margin: 2rem 1rem 1rem 1rem;">Help Us Raise ₦2Billion to Establish & Sustain for 5 years,<br> the SAMIYA Community Tourism, Enterprise Hub & Learning Centre. <br> Tap/Click on the poster below</h2>
+        <div style="display: flex; justify-content: center;">
+            <a href="index4raise.html">
+                <img src="images/raise 2billion.jpeg" style="width: 100%; max-width: 450px; height: auto;" alt="Help Us Raise ₦2Billion">
+            </a>
+        </div>
+    </section>
 
     <section id="about">
         <h2 class="section-title">About the Festival</h2>
@@ -103,11 +197,14 @@
             </div>
         </div>
     </section>
+    
+    <footer>
+        <p>Website by Zack Amata 08026005667 || &copy; AlumniFest Afrique 2026. Building Africa Through Alumni || Harnessing Tourism for Development.</p>
+    </footer>
 
     <!-- SYSTEM FUNCTION SCRIPTS -->
     <script>
-        // 1. Safe Mobile Hamburger Toggler
-         // 1. Mobile Hamburger Toggler
+        // 1. Mobile Hamburger Toggler
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -152,10 +249,7 @@
                 localStorage.setItem('alufest-theme', newTheme);
                 updateThemeIcon(newTheme);
             });
-        
-                } else {
-                    themeIcon.className = 'ph ph-moon';
-                }
+        }
 
         // 3. Isolated Live Countdown Timer Logic
         function startFestivalCountdown() {
@@ -166,7 +260,6 @@
             const minutesEl = document.getElementById("minutes");
             const secondsEl = document.getElementById("seconds");
 
-            // Exit cleanly if elements aren't present on this specific page instead of throwing an error
             if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
             function updateCounter() {
@@ -199,6 +292,5 @@
 
         window.addEventListener("DOMContentLoaded", startFestivalCountdown);
     </script>
-    
 </body>
 </html>
