@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlumniFest Afrique Song Contest 2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/song.css">
+    <link rel="stylesheet" href="css/songcontest2.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#F59E0B',
+                            goldLight: '#FBBF24',
+                            emerald: '#064E3B',
+                            emeraldDark: '#022C22',
+                            emeraldDeep: '#011B15',
+                            terracotta: '#E05638',
+                            terracottaDark: '#C2410C',
+                            dark: '#08120F',
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': 'radial-gradient(circle at 50% 20%, rgba(245, 158, 11, 0.15) 0%, rgba(6, 78, 59, 0.3) 45%, rgba(1, 27, 21, 1) 100%)',
+                        'gold-gradient': 'linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%)',
+                        'card-gradient': 'linear-gradient(180deg, rgba(6, 78, 59, 0.4) 0%, rgba(2, 44, 34, 0.7) 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-gold {
+            box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.4);
+        }
+        .glow-emerald {
+            box-shadow: 0 0 30px -5px rgba(6, 78, 59, 0.6);
+        }
+        .glass-panel {
+            background: rgba(4, 38, 30, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #FFF 10%, #FBBF24 50%, #F59E0B 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #011B15;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #064E3B;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #F59E0B;
+        }
+    </style>
+</head>
+<body class="bg-brand-emeraldDeep text-gray-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-brand-gold selection:text-brand-dark">
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-40 glass-panel border-b border-brand-gold/20 backdrop-blur-md">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <!-- <div class="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center text-brand-dark font-black text-xl shadow-lg">
+                    <i class="fa-solid fa-music"></i>
+                </div> -->
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <div class="nav-brand">
+            <div class="alufest__logo">
+                <img src="images/logo1.jpeg" alt="AlumniFest Afrique 2026 Logo">
+            </div>
+            <div class="logo">AlumniFest Afrique 2026</div>
+        </div>
+                <a href="#about" class="hover:text-brand-gold transition duration-200">About Contest</a>
+                <a href="#themes" class="hover:text-brand-gold transition duration-200">Themes & Genres</a>
+                <a href="#guidelines" class="hover:text-brand-gold transition duration-200">Guidelines</a>
+                <a href="#submit" class="hover:text-brand-gold transition duration-200">How to Win</a>
+                <a href="index.html" class="hover:text-brand-gold transition duration-200">Back to Home Page</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="#submit" class="bg-gold-gradient text-brand-dark font-bold px-5 py-2.5 rounded-full hover:brightness-110 transition duration-300 shadow-md transform hover:-translate-y-0.5 text-sm">
+                    <i class="fa-solid fa-paper-plane mr-2"></i> Submit Entry
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+        
+        Hero Section
+        <section class="relative pt-12 pb-20 md:py-24 bg-hero-pattern overflow-hidden">
+            <!-- Decorative Subtle African Pattern Elements -->
+            <div class="absolute top-10 left-5 w-72 h-72 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-5 right-5 w-96 h-96 bg-brand-terracotta/15 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                
+                <!-- Regional Badge -->
+                <div class="inline-flex items-center space-x-2 bg-brand-emerald/80 border border-brand-gold/30 rounded-full px-4 py-1.5 mb-6 text-xs sm:text-sm font-semibold tracking-wide text-brand-goldLight shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    <span>From Jos to Nairobi, Lagos to Kigali — We are AlumniFest Afrique</span>
+                </div>
+
+                <!-- Main Headline -->
+                 <h1 class="font-heading tracking-tight leading-tight text-white max-w-4xl mx-auto mb-4">
+    <span class="text-xl sm:text-2xl lg:text-3xl font-semibold">Compose the Theme Song & Soundtrack for </span><span class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gradient-gold">AlumniFest Afrique 2026</span>
+</h1>
+
+                <!-- <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white max-w-4xl mx-auto mb-4">
+                    Compose the Theme Song & Soundtrack to <span class="text-gradient-gold">AlumniFest Afrique 2026</span>
+                </h1> -->
+                
+                <p class="text-lg sm:text-2xl text-gray-300 font-light max-w-2xl mx-auto mb-8 italic">
+                    "Africa's Light is our Alumni."
+                </p>
+
+                <!-- Prize Banner & CTA Grid -->
+                <div class="max-w-xl mx-auto mb-12 glass-panel p-6 sm:p-8 rounded-3xl border border-brand-gold/40 glow-gold">
+                    <p class="text-xs font-bold uppercase tracking-widest text-brand-goldLight mb-1">Official Song Contest Prize</p>
+                    <div class="text-4xl sm:text-6xl font-extrabold text-white font-heading tracking-tight mb-2">
+                        ₦100,000 <span class="text-xl sm:text-3xl text-brand-gold font-normal">CASH</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-6">Winner takes all + gets credited as the Official AlumniFest Afrique Anthem Creator across the continent!</p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                        <button onclick="openModal()" class="bg-gold-gradient text-brand-dark font-bold text-base px-8 py-3.5 rounded-full hover:brightness-110 transition duration-300 shadow-xl flex items-center justify-center space-x-2 transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-music"></i>
+                            <span>Submit Your Entry Now</span>
+                        </button>
+                        <a href="#audio-demo" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-base px-6 py-3.5 rounded-full transition duration-300 border border-white/20 flex items-center justify-center">
+                            <i class="fa-solid fa-headphones mr-2"></i> Sample Beat Vibe
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Live Countdown Timer -->
+                <div class="max-w-3xl mx-auto">
+                    <p class="text-xs uppercase tracking-widest text-gray-400 mb-3 font-semibold">Submissions Close In</p>
+                    <div class="grid grid-cols-4 gap-2 sm:gap-4 max-w-md mx-auto" id="countdown">
+                        <div class="glass-panel p-3 sm:p-4 rounded-2xl border border-brand-emerald">
+                            <span id="days" class="block font-heading text-2xl sm:text-4xl font-extrabold text-brand-gold">00</span>
+                            <span class="text-[10px] sm:text-xs text-gray-400 uppercase font-medium">Days</span>
+                        </div>
+                        <div class="glass-panel p-3 sm:p-4 rounded-2xl border border-brand-emerald">
+                            <span id="hours" class="block font-heading text-2xl sm:text-4xl font-extrabold text-brand-gold">00</span>
+                            <span class="text-[10px] sm:text-xs text-gray-400 uppercase font-medium">Hours</span>
+                        </div>
+                        <div class="glass-panel p-3 sm:p-4 rounded-2xl border border-brand-emerald">
+                            <span id="minutes" class="block font-heading text-2xl sm:text-4xl font-extrabold text-brand-gold">00</span>
+                            <span class="text-[10px] sm:text-xs text-gray-400 uppercase font-medium">Minutes</span>
+                        </div>
+                        <div class="glass-panel p-3 sm:p-4 rounded-2xl border border-brand-emerald">
+                            <span id="seconds" class="block font-heading text-2xl sm:text-4xl font-extrabold text-brand-gold">00</span>
+                            <span class="text-[10px] sm:text-xs text-gray-400 uppercase font-medium">Seconds</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-3"><i class="fa-regular fa-clock mr-1"></i> Deadline: 23:59 WAT, Wednesday, November 11, 2026</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Core Song Pillars / Requirements -->
+        <section id="themes" class="py-16 bg-brand-dark/60 border-t border-b border-brand-emerald/40 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2">Creative Direction</h2>
+                    <h3 class="font-heading text-2xl sm:text-4xl font-bold text-white">4 Core Pillars Your Song Must Carry</h3>
+                    <p class="text-gray-400 text-sm sm:text-base mt-2">Every entry will be judged on how effectively it blends these core themes into an infectious rhythm.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="glass-panel p-6 rounded-2xl border border-brand-gold/20 hover:border-brand-gold transition duration-300 group">
+                        <div class="text-4xl mb-4 group-hover:scale-110 transition transform duration-300">🤝</div>
+                        <h4 class="font-heading text-xl font-bold text-white mb-2">Unity</h4>
+                        <p class="text-gray-300 text-sm">Celebrate the bond that connects alumni across different universities, cultures, and borders across Africa.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glass-panel p-6 rounded-2xl border border-brand-gold/20 hover:border-brand-gold transition duration-300 group">
+                        <div class="text-4xl mb-4 group-hover:scale-110 transition transform duration-300">✨</div>
+                        <h4 class="font-heading text-xl font-bold text-white mb-2">Light</h4>
+                        <p class="text-gray-300 text-sm">Inspiration, hope, leadership, and brilliance. Show how alumni shine bright in their respective industries.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-panel p-6 rounded-2xl border border-brand-gold/20 hover:border-brand-gold transition duration-300 group">
+                        <div class="text-4xl mb-4 group-hover:scale-110 transition transform duration-300">🎓</div>
+                        <h4 class="font-heading text-xl font-bold text-white mb-2">Alumni</h4>
+                        <p class="text-gray-300 text-sm">Honor the heritage, memories, growth, and impact of graduates who continue to transform communities.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="glass-panel p-6 rounded-2xl border border-brand-gold/20 hover:border-brand-gold transition duration-300 group">
+                        <div class="text-4xl mb-4 group-hover:scale-110 transition transform duration-300">🌍</div>
+                        <h4 class="font-heading text-xl font-bold text-white mb-2">Africa</h4>
+                        <p class="text-gray-300 text-sm">Infuse vibrant, authentic African sonic identity—rich, energetic, soul-stirring, and globally resonant.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Genres & Languages Showcase -->
+        <section class="py-16 bg-brand-emeraldDeep">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2 block">Complete Creative Freedom</span>
+                        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mb-4">Any Style. Any Language. Pure African Vibes.</h2>
+                        <p class="text-gray-300 mb-6 text-sm sm:text-base leading-relaxed">
+                            Whether you produce high-energy club anthems or soulful acoustic melodies, this contest is open to all genres and mother tongues across our vibrant continent.
+                        </p>
+                        
+                        <!-- Genres Tag Cloud -->
+                        <div class="mb-6">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Popular Music Styles Welcome:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-brand-emerald/60 text-brand-gold border border-brand-gold/30 px-3 py-1.5 rounded-lg text-sm font-semibold">Afrobeat</span>
+                                <span class="bg-brand-emerald/60 text-brand-gold border border-brand-gold/30 px-3 py-1.5 rounded-lg text-sm font-semibold">Highlife</span>
+                                <span class="bg-brand-emerald/60 text-brand-gold border border-brand-gold/30 px-3 py-1.5 rounded-lg text-sm font-semibold">Amapiano</span>
+                                <span class="bg-brand-emerald/60 text-brand-gold border border-brand-gold/30 px-3 py-1.5 rounded-lg text-sm font-semibold">Afro-Pop</span>
+                                <span class="bg-brand-emerald/60 text-brand-gold border border-brand-gold/30 px-3 py-1.5 rounded-lg text-sm font-semibold">Afro-Fusion</span>
+                                <span class="bg-brand-emerald/60 text-brand-gold border border-brand-gold/30 px-3 py-1.5 rounded-lg text-sm font-semibold">& More...</span>
+                            </div>
+                        </div>
+
+                        <!-- Languages Tag Cloud -->
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Accepted Languages:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white/5 border border-white/10 text-gray-200 px-3 py-1 rounded-md text-xs">English</span>
+                                <span class="bg-white/5 border border-white/10 text-gray-200 px-3 py-1 rounded-md text-xs">Yoruba</span>
+                                <span class="bg-white/5 border border-white/10 text-gray-200 px-3 py-1 rounded-md text-xs">Igbo</span>
+                                <span class="bg-white/5 border border-white/10 text-gray-200 px-3 py-1 rounded-md text-xs">Swahili</span>
+                                <span class="bg-white/5 border border-white/10 text-gray-200 px-3 py-1 rounded-md text-xs">Hausa</span>
+                                <span class="bg-white/5 border border-white/10 text-gray-200 px-3 py-1 rounded-md text-xs">French</span>
+                                <span class="bg-white/5 border border-white/10 text-gray-200 px-3 py-1 rounded-md text-xs">Arabic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Audio Synth Preview Widget -->
+                    <div id="audio-demo" class="glass-panel p-6 sm:p-8 rounded-3xl border border-brand-gold/30 relative">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold">
+                                    <i class="fa-solid fa-sliders text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-bold text-white">Inspiration Beat Generator</h4>
+                                    <p class="text-xs text-gray-400">Preview the rhythmic tempo & vibe</p>
+                                </div>
+                            </div>
+                            <span class="text-xs bg-brand-terracotta/20 text-brand-terracotta border border-brand-terracotta/30 px-2.5 py-1 rounded-full font-bold">Live Demo</span>
+                        </div>
+
+                        <!-- Visualizer Bars (Animated via JS) -->
+                        <div class="h-24 bg-brand-emeraldDark/80 rounded-2xl flex items-end justify-center space-x-1.5 p-4 mb-6 border border-white/5" id="visualizer">
+                            <!-- JS dynamic bars generated here -->
+                        </div>
+
+                        <!-- Audio Controls -->
+                        <div class="flex items-center justify-between">
+                            <button id="playBeatBtn" onclick="toggleBeat()" class="bg-gold-gradient text-brand-dark px-6 py-3 rounded-full font-bold flex items-center space-x-2 hover:brightness-110 transition">
+                                <i class="fa-solid fa-play" id="playIcon"></i>
+                                <span id="playText">Test Beat Sample</span>
+                            </button>
+                            <span class="text-xs text-gray-400 italic">Target tempo: ~112 - 120 BPM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requirements & How to Submit Section -->
+        <section id="guidelines" class="py-16 bg-brand-dark/80 border-t border-brand-emerald/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2">Submission Guidelines</h2>
+                    <h3 class="font-heading text-3xl sm:text-4xl font-bold text-white">What You Need To Submit</h3>
+                    <p class="text-gray-400 text-sm sm:text-base mt-2">Ensure your entry packet contains all items listed below before the official deadline.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <!-- Step 1 -->
+                    <div class="glass-panel p-6 rounded-2xl border border-white/10 relative">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold text-brand-dark font-extrabold flex items-center justify-center font-heading mb-4">1</div>
+                        <h4 class="font-heading text-lg font-bold text-white mb-2">Two Audio Versions (MP3)</h4>
+                        <ul class="text-gray-300 text-sm space-y-2">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mr-2 mt-1"></i> <strong>1-Minute Catchy Jingle:</strong> For quick radio/social media promos.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mr-2 mt-1"></i> <strong>3-Minute Full Song:</strong> The complete anthem production.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="glass-panel p-6 rounded-2xl border border-white/10 relative">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold text-brand-dark font-extrabold flex items-center justify-center font-heading mb-4">2</div>
+                        <h4 class="font-heading text-lg font-bold text-white mb-2">Lyrics & Written Text</h4>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Attach a clear document or message containing the full written lyrics of the song, noting any translated phrases if sung in native languages.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="glass-panel p-6 rounded-2xl border border-white/10 relative">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold text-brand-dark font-extrabold flex items-center justify-center font-heading mb-4">3</div>
+                        <h4 class="font-heading text-lg font-bold text-white mb-2">Full Name & Contact Info</h4>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Include your full official name, artist handle, active phone line, and primary country/city of residence (e.g. Lagos, Jos, Nairobi).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Official Channels Callout Box -->
+                <div id="submit" class="glass-panel p-8 sm:p-10 rounded-3xl border border-brand-gold/40 max-w-4xl mx-auto glow-emerald">
+                    <div class="text-center mb-8">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2 block">Direct Entry Channels</span>
+                        <h3 class="font-heading text-2xl sm:text-3xl font-extrabold text-white">Ready to Send Your Track?</h3>
+                        <p class="text-gray-300 text-sm mt-1">Submit directly via Email or WhatsApp using the official links below.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                        <!-- Email Box -->
+                        <div class="bg-brand-emeraldDark/90 p-6 rounded-2xl border border-brand-gold/30 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <div class="w-10 h-10 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold">
+                                        <i class="fa-solid fa-envelope text-xl"></i>
+                                    </div>
+                                    <h4 class="font-heading font-bold text-white">Email Submission</h4>
+                                </div>
+                                <p class="text-xs text-gray-400 mb-4">Send audio files + lyrics directly to our official inbox:</p>
+                                <div class="bg-black/40 p-3 rounded-lg text-sm text-brand-gold font-mono break-all mb-4 flex items-center justify-between">
+                                    <span>alumnifestafrique@protonme.com</span>
+                                    <button onclick="copyToClipboard('alumnifestafrique@protonme.com')" class="text-xs text-gray-400 hover:text-white ml-2" title="Copy email">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <a href="mailto:alumnifestafrique@protonme.com?subject=AlumniFest%20Afrique%20Song%20Contest%20Entry" class="w-full bg-white/10 hover:bg-white/20 text-white text-center py-2.5 rounded-xl font-semibold text-sm transition border border-white/10">
+                                Open Email App
+                            </a>
+                        </div>
+
+                        <!-- WhatsApp Box -->
+                        <div class="bg-brand-emeraldDark/90 p-6 rounded-2xl border border-brand-gold/30 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <div class="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400">
+                                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                                    </div>
+                                    <h4 class="font-heading font-bold text-white">WhatsApp Submissions</h4>
+                                </div>
+                                <p class="text-xs text-gray-400 mb-4">Send audio tracks & lyrics directly to our contest desks:</p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="bg-black/40 p-2.5 rounded-lg text-sm text-green-400 font-mono flex items-center justify-between">
+                                        <span>08032338251</span>
+                                        <a href="https://wa.me/2348032338251?text=Hello%20AlumniFest%20Afrique,%20I%20want%20to%20submit%20my%20song%20entry." target="_blank" class="text-xs bg-green-600 hover:bg-green-500 text-white px-2.5 py-1 rounded font-sans font-semibold">Chat</a>
+                                    </div>
+                                    <div class="bg-black/40 p-2.5 rounded-lg text-sm text-green-400 font-mono flex items-center justify-between">
+                                        <span>08168562188</span>
+                                        <a href="https://wa.me/2348168562188?text=Hello%20AlumniFest%20Afrique,%20I%20want%20to%20submit%20my%20song%20entry." target="_blank" class="text-xs bg-green-600 hover:bg-green-500 text-white px-2.5 py-1 rounded font-sans font-semibold">Chat</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Online Quick Form Trigger Button -->
+                    <div class="text-center pt-2">
+                        <button onclick="openModal()" class="bg-gold-gradient text-brand-dark font-extrabold text-base px-8 py-3.5 rounded-full hover:brightness-110 transition shadow-lg inline-flex items-center space-x-2">
+                            <i class="fa-solid fa-file-arrow-up"></i>
+                            <span>Use Online Entry Portal</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Submission Modal -->
+    <div id="entryModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="glass-panel max-w-lg w-full rounded-3xl p-6 sm:p-8 border border-brand-gold/40 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div class="mb-6">
+                <h3 class="font-heading text-2xl font-bold text-white">Submit Song Entry</h3>
+                <p class="text-xs text-gray-400">Fill out your details to prepare your contest entry package.</p>
+            </div>
+
+            <form id="submissionForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">Full Name</label>
+                    <input type="text" required placeholder="e.g. Samuel Adebayo" class="w-full bg-black/50 border border-brand-emerald/80 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">Phone Line / WhatsApp</label>
+                    <input type="tel" required placeholder="e.g. +234 803 000 0000" class="w-full bg-black/50 border border-brand-emerald/80 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">City & Country</label>
+                    <input type="text" required placeholder="e.g. Nairobi, Kenya" class="w-full bg-black/50 border border-brand-emerald/80 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">Song Title</label>
+                    <input type="text" required placeholder="e.g. Light of Africa" class="w-full bg-black/50 border border-brand-emerald/80 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">Lyrics & Song Description</label>
+                    <textarea rows="3" required placeholder="Paste written lyrics here..." class="w-full bg-black/50 border border-brand-emerald/80 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold"></textarea>
+                </div>
+
+                <div class="p-3 bg-brand-emerald/30 border border-brand-emerald rounded-xl text-xs text-gray-300">
+                    <p class="font-semibold text-brand-gold mb-1"><i class="fa-solid fa-circle-info mr-1"></i> Audio Attachment Notice</p>
+                    <p>After clicking submit, your email app will open pre-filled so you can attach your 1-minute jingle & 3-minute MP3 files.</p>
+                </div>
+
+                <button type="submit" class="w-full bg-gold-gradient text-brand-dark font-extrabold py-3.5 rounded-xl hover:brightness-110 transition mt-4">
+                    Continue to Submit Entry
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-brand-gold text-brand-dark font-bold px-4 py-3 rounded-xl shadow-2xl hidden items-center space-x-2 z-50">
+        <i class="fa-solid fa-check-circle"></i>
+        <span id="toastMsg">Action completed!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-emeraldDeep border-t border-brand-emerald/40 py-8 text-xs text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 text-center sm:flex sm:justify-between sm:items-center">
+             <p class="footer">Website by Zack Amata 08026005667 || &copy; 2026 AlumniFest Afrique. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Embedded Scripts -->
+    <script>
+        // --- Countdown Timer Logic ---
+        const targetDate = new Date("November 11, 2026 23:59:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerText = days.toString().padStart(2, '0');
+                document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+                document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+                document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+            } else {
+                document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-center text-brand-gold font-bold text-xl'>Submissions Closed!</div>";
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // --- Visualizer Bar Generation ---
+        const visualizer = document.getElementById('visualizer');
+        const barCount = 28;
+        for (let i = 0; i < barCount; i++) {
+            const bar = document.createElement('div');
+            bar.className = 'w-1.5 bg-brand-gold/40 rounded-full transition-all duration-150';
+            bar.style.height = `${Math.floor(Math.random() * 60) + 10}%`;
+            visualizer.appendChild(bar);
+        }
+
+        let isPlaying = false;
+        let audioCtx = null;
+        let beatInterval = null;
+
+        function toggleBeat() {
+            const playIcon = document.getElementById('playIcon');
+            const playText = document.getElementById('playText');
+            const bars = visualizer.children;
+
+            if (!isPlaying) {
+                isPlaying = true;
+                playIcon.className = 'fa-solid fa-square';
+                playText.innerText = 'Stop Sample';
+
+                // Simple Web Audio Synth Beat for Vibe Demo
+                if (!audioCtx) {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+
+                let step = 0;
+                beatInterval = setInterval(() => {
+                    // Animate bars
+                    for (let bar of bars) {
+                        bar.style.height = `${Math.floor(Math.random() * 85) + 15}%`;
+                        bar.style.backgroundColor = '#F59E0B';
+                    }
+
+                    // Play simple synth click/kick sound
+                    try {
+                        const osc = audioCtx.createOscillator();
+                        const gain = audioCtx.createGain();
+                        osc.connect(gain);
+                        gain.connect(audioCtx.destination);
+                        
+                        osc.frequency.value = step % 2 === 0 ? 120 : 80;
+                        gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
+                        
+                        osc.start();
+                        osc.stop(audioCtx.currentTime + 0.15);
+                    } catch(e) {}
+
+                    step++;
+                }, 280);
+
+            } else {
+                isPlaying = false;
+                playIcon.className = 'fa-solid fa-play';
+                playText.innerText = 'Test Beat Sample';
+                clearInterval(beatInterval);
+
+                for (let bar of bars) {
+                    bar.style.height = '20%';
+                    bar.style.backgroundColor = 'rgba(245, 158, 11, 0.4)';
+                }
+            }
+        }
+
+        // --- Clipboard Helper ---
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast("Copied to clipboard!");
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 3000);
+        }
+
+        // --- Modal Control ---
+        function openModal() {
+            document.getElementById('entryModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('entryModal').classList.add('hidden');
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            closeModal();
+            showToast("Opening Email Application...");
+
+            const form = e.target;
+            const name = form.elements[0].value;
+            const phone = form.elements[1].value;
+            const location = form.elements[2].value;
+            const title = form.elements[3].value;
+            const lyrics = form.elements[4].value;
+
+            const subject = encodeURIComponent(`AlumniFest Afrique Song Entry - ${title} by ${name}`);
+            const body = encodeURIComponent(
+                `Full Name: ${name}\nPhone/WhatsApp: ${phone}\nLocation: ${location}\nSong Title: ${title}\n\nLyrics & Notes:\n${lyrics}\n\n[Please remember to attach your 1-minute jingle and 3-minute song MP3 files to this email!]`
+            );
+
+            window.location.href = `mailto:alumnifestafrique@protonme.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+</html>
